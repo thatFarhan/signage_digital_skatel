@@ -63,6 +63,76 @@ class JadwalController extends Controller
         ->orderBy('jam_pelajaran', 'asc')
         ->get();
 
+        $jadwalX1 = JadwalModel::with('mapel')
+        ->where('hari', '=', date('D'))
+        ->where('angkatan', '=', 10)
+        ->where('jam_pelajaran', '=', 1)
+        ->orderBy('kelas', 'asc')
+        ->get();
+        
+        $jadwalX2 = JadwalModel::with('mapel')
+        ->where('hari', '=', date('D'))
+        ->where('angkatan', '=', 10)
+        ->where('jam_pelajaran', '=', 2)
+        ->orderBy('kelas', 'asc')
+        ->get();
+
+        $jadwalX3 = JadwalModel::with('mapel')
+        ->where('hari', '=', date('D'))
+        ->where('angkatan', '=', 10)
+        ->where('jam_pelajaran', '=', 3)
+        ->orderBy('kelas', 'asc')
+        ->get();
+
+        $jadwalX4 = JadwalModel::with('mapel')
+        ->where('hari', '=', date('D'))
+        ->where('angkatan', '=', 10)
+        ->where('jam_pelajaran', '=', 4)
+        ->orderBy('kelas', 'asc')
+        ->get();
+
+        $jadwalX5 = JadwalModel::with('mapel')
+        ->where('hari', '=', date('D'))
+        ->where('angkatan', '=', 10)
+        ->where('jam_pelajaran', '=', 5)
+        ->orderBy('kelas', 'asc')
+        ->get();
+
+        $jadwalX6 = JadwalModel::with('mapel')
+        ->where('hari', '=', date('D'))
+        ->where('angkatan', '=', 10)
+        ->where('jam_pelajaran', '=', 6)
+        ->orderBy('kelas', 'asc')
+        ->get();
+
+        $jadwalX7 = JadwalModel::with('mapel')
+        ->where('hari', '=', date('D'))
+        ->where('angkatan', '=', 10)
+        ->where('jam_pelajaran', '=', 7)
+        ->orderBy('kelas', 'asc')
+        ->get();
+
+        $jadwalX8 = JadwalModel::with('mapel')
+        ->where('hari', '=', date('D'))
+        ->where('angkatan', '=', 10)
+        ->where('jam_pelajaran', '=', 8)
+        ->orderBy('kelas', 'asc')
+        ->get();
+
+        $jadwalX9 = JadwalModel::with('mapel')
+        ->where('hari', '=', date('D'))
+        ->where('angkatan', '=', 10)
+        ->where('jam_pelajaran', '=', 9)
+        ->orderBy('kelas', 'asc')
+        ->get();
+
+        $jadwalX10 = JadwalModel::with('mapel')
+        ->where('hari', '=', date('D'))
+        ->where('angkatan', '=', 10)
+        ->where('jam_pelajaran', '=', 10)
+        ->orderBy('kelas', 'asc')
+        ->get();
+
         $guruToday = GuruModel::whereIn('id_guru', function($query){
             $query->select('id_guru')
             ->from(with(new MapelModel)->getTable())
@@ -73,7 +143,7 @@ class JadwalController extends Controller
             });
         })->get();
 
-        return view('jadwal', compact('jadwalXA', 'jadwalXB', 'jadwalXC', 'jadwalXD', 'jadwalXE', 'jadwalXF', 'jadwalXG', 'guruToday'));
+        return view('jadwal', compact('jadwalX1', 'jadwalX2', 'jadwalX3', 'jadwalX4', 'jadwalX5', 'jadwalX6', 'jadwalX7', 'jadwalX8', 'jadwalX9', 'jadwalX10', 'guruToday'));
     }
 
     /**

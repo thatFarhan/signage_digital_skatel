@@ -19,5 +19,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::resource('guru', GuruController::class);
 Route::resource('jadwal', JadwalController::class);
