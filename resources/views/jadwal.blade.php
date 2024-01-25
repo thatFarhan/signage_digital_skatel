@@ -116,16 +116,6 @@
                                 </div>
                             </div>
                         @endforeach
-                        @foreach ($guruToday as $d)
-                            <div class="flex">
-                                <div class="grid place-content-center">
-                                    <div class="h-5 w-5 mr-5" style="background-color: {{$d->warna}}"></div>
-                                </div>
-                                <div class="grid place-content-center text-lg">
-                                    <div class="">{{$d->nama_guru}}</div>
-                                </div>
-                            </div>
-                        @endforeach
                     </div>
                 </div>
                 <div class="border-[1.5px] border-slate-400 rounded-lg h-[50%]"></div>
