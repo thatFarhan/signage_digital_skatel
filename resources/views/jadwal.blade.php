@@ -103,11 +103,11 @@
                 </div>
             </div>
             <div class="flex flex-col gap-3">
-                <div class="border-[1.5px] border-slate-400 rounded-lg h-[50%]">
+                <div class="border-[1.5px] border-slate-400 rounded-lg h-1/2">
                     <div class="grid place-content-center font-semibold text-lg border-b-[1.5px] border-slate-300 h-[15%] mx-5">Guru yang Mengajar</div>
                     <div id="guruToday" class="overflow-y-auto sb-hidden h-[85%] mx-7">
                         @foreach ($guruToday as $d)
-                            <div class="flex">
+                            <div class="flex border-b-[1.5px] border-dashed py-2">
                                 <div class="grid place-content-center">
                                     <div class="h-5 w-5 mr-5" style="background-color: {{$d->warna}}"></div>
                                 </div>
@@ -221,12 +221,14 @@
             currentJp.classList.add("bg-slate-200");
             currentJp.classList.add("font-bold");
 
-            previousJp.classList.remove("bg-slate-200");
-            previousJp.classList.remove("font-bold");
-
+            if (previousJp != null) {
+                previousJp.classList.remove("bg-slate-200");
+                previousJp.classList.remove("font-bold");
+            }
             setTimeout(highlightJP, 1000);
         }
     }
+
     function scrollDownGT() {
         var lastPosition;
 
@@ -243,6 +245,7 @@
             guruToday.scrollBy(0, 1);
         }, 20);
     }
+
     function scrollUpGT() {
         var lastPosition;
 
