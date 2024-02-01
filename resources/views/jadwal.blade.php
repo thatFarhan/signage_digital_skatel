@@ -7,7 +7,7 @@
     @vite('resources/css/app.css')
     <title>Document</title>
 </head>
-<body class="font-inter" onload="[startTime(), highlightJP(), scrollDownGT()]">
+<body class="font-inter" onload="[startTime(), highlightJP(), scrollDownGT(), scrollDownKA()]">
     <div class="flex flex-col h-screen w-screen px-20 py-16">
         <div class="flex justify-between">
             <img src="/asset/img/logo_sekolah.png" alt="" class="h-16">
@@ -22,29 +22,29 @@
         <div class="mt-16 grid grid-cols-3 gap-3 flex-grow">
             <div class="grid grid-cols-[repeat(13,minmax(0,1fr))] border border-slate-400 rounded-lg col-span-2 break-all">
                 <div class="grid grid-rows-8">
-                    <div class="border border-slate-400 text-center p-2 grid place-items-center rounded-tl-lg"></div>
-                    <div class="border border-slate-400 text-center p-2 grid place-items-center">XA</div>
-                    <div class="border border-slate-400 text-center p-2 grid place-items-center">XB</div>
-                    <div class="border border-slate-400 text-center p-2 grid place-items-center">XC</div>
-                    <div class="border border-slate-400 text-center p-2 grid place-items-center">XD</div>
-                    <div class="border border-slate-400 text-center p-2 grid place-items-center">XE</div>
-                    <div class="border border-slate-400 text-center p-2 grid place-items-center">XF</div>
-                    <div class="border border-slate-400 text-center p-2 grid place-items-center rounded-bl-lg">XG</div>
+                    <div class="border border-slate-400 text-center p-2 grid place-items-center text-2xl rounded-tl-lg"></div>
+                    <div class="border border-slate-400 text-center p-2 grid place-items-center text-2xl">X A</div>
+                    <div class="border border-slate-400 text-center p-2 grid place-items-center text-2xl">X B</div>
+                    <div class="border border-slate-400 text-center p-2 grid place-items-center text-2xl">X C</div>
+                    <div class="border border-slate-400 text-center p-2 grid place-items-center text-2xl">X D</div>
+                    <div class="border border-slate-400 text-center p-2 grid place-items-center text-2xl">X E</div>
+                    <div class="border border-slate-400 text-center p-2 grid place-items-center text-2xl">X F</div>
+                    <div class="border border-slate-400 text-center p-2 grid place-items-center text-2xl rounded-bl-lg">X G</div>
                 </div>
                 <div class="grid grid-rows-8">
-                    <div id="jp1" class="border border-slate-400 text-center p-2 grid place-items-center">1</div>
+                    <div id="jp1" class="border border-slate-400 text-center p-2 grid place-items-center text-2xl">1</div>
                     @foreach ($jadwalX1 as $d)
                         <div class="border border-slate-400 text-center p-2 grid place-items-center" style="background-color: {{$d->mapel->guru->warna}}">{{$d->mapel->nama_mapel}}</div>
                     @endforeach
                 </div>
                 <div class="grid grid-rows-8">
-                    <div id="jp2" class="border border-slate-400 text-center p-2 grid place-items-center">2</div>
+                    <div id="jp2" class="border border-slate-400 text-center p-2 grid place-items-center text-2xl">2</div>
                     @foreach ($jadwalX2 as $d)
                         <div class="border border-slate-400 text-center p-2 grid place-items-center" style="background-color: {{$d->mapel->guru->warna}}">{{$d->mapel->nama_mapel}}</div>
                     @endforeach
                 </div>
                 <div class="grid grid-rows-8">
-                    <div id="jp3" class="border border-slate-400 text-center p-2 grid place-items-center">3</div>
+                    <div id="jp3" class="border border-slate-400 text-center p-2 grid place-items-center text-2xl">3</div>
                     @foreach ($jadwalX3 as $d)
                         <div class="border border-slate-400 text-center p-2 grid place-items-center" style="background-color: {{$d->mapel->guru->warna}}">{{$d->mapel->nama_mapel}}</div>
                     @endforeach
@@ -53,19 +53,19 @@
                     <div class="-rotate-90 text-center text-3xl w-96">Break</div>
                 </div>
                 <div class="grid grid-rows-8">
-                    <div id="jp4" class="border border-slate-400 text-center p-2 grid place-items-center">4</div>
+                    <div id="jp4" class="border border-slate-400 text-center p-2 grid place-items-center text-2xl">4</div>
                     @foreach ($jadwalX4 as $d)
                         <div class="border border-slate-400 text-center p-2 grid place-items-center" style="background-color: {{$d->mapel->guru->warna}}">{{$d->mapel->nama_mapel}}</div>
                     @endforeach
                 </div>
                 <div class="grid grid-rows-8">
-                    <div id="jp5" class="border border-slate-400 text-center p-2 grid place-items-center">5</div>
+                    <div id="jp5" class="border border-slate-400 text-center p-2 grid place-items-center text-2xl">5</div>
                     @foreach ($jadwalX5 as $d)
                         <div class="border border-slate-400 text-center p-2 grid place-items-center" style="background-color: {{$d->mapel->guru->warna}}">{{$d->mapel->nama_mapel}}</div>
                     @endforeach
                 </div>
                 <div class="grid grid-rows-8">
-                    <div id="jp6" class="border border-slate-400 text-center p-2 grid place-items-center">6</div>
+                    <div id="jp6" class="border border-slate-400 text-center p-2 grid place-items-center text-2xl">6</div>
                     @foreach ($jadwalX6 as $d)
                         <div class="border border-slate-400 text-center p-2 grid place-items-center" style="background-color: {{$d->mapel->guru->warna}}">{{$d->mapel->nama_mapel}}</div>
                     @endforeach
@@ -74,25 +74,25 @@
                     <div class="-rotate-90 text-center text-3xl w-96">Break</div>
                 </div>
                 <div class="grid grid-rows-8">
-                    <div id="jp7" class="border border-slate-400 text-center p-2 grid place-items-center">7</div>
+                    <div id="jp7" class="border border-slate-400 text-center p-2 grid place-items-center text-2xl">7</div>
                     @foreach ($jadwalX7 as $d)
                         <div class="border border-slate-400 text-center p-2 grid place-items-center" style="background-color: {{$d->mapel->guru->warna}}">{{$d->mapel->nama_mapel}}</div>
                     @endforeach
                 </div>
                 <div class="grid grid-rows-8">
-                    <div id="jp8" class="border border-slate-400 text-center p-2 grid place-items-center">8</div>
+                    <div id="jp8" class="border border-slate-400 text-center p-2 grid place-items-center text-2xl">8</div>
                     @foreach ($jadwalX8 as $d)
                         <div class="border border-slate-400 text-center p-2 grid place-items-center" style="background-color: {{$d->mapel->guru->warna}}">{{$d->mapel->nama_mapel}}</div>
                     @endforeach
                 </div>
                 <div class="grid grid-rows-8">
-                    <div id="jp9" class="border border-slate-400 text-center p-2 grid place-items-center">9</div>
+                    <div id="jp9" class="border border-slate-400 text-center p-2 grid place-items-center text-2xl">9</div>
                     @foreach ($jadwalX9 as $d)
                         <div class="border border-slate-400 text-center p-2 grid place-items-center" style="background-color: {{$d->mapel->guru->warna}}">{{$d->mapel->nama_mapel}}</div>
                     @endforeach
                 </div>
                 <div class="grid grid-rows-8">
-                    <div id="jp10" class="border border-slate-400 text-center p-2 grid place-items-center rounded-tr-lg">10</div>
+                    <div id="jp10" class="border border-slate-400 text-center p-2 grid place-items-center text-2xl rounded-tr-lg">10</div>
                     @foreach ($jadwalX10 as $d)
                         @if($loop->index != 6)
                             <div class="border border-slate-400 text-center p-2 grid place-items-center" style="background-color: {{$d->mapel->guru->warna}}">{{$d->mapel->nama_mapel}}</div>
@@ -118,7 +118,39 @@
                         @endforeach
                     </div>
                 </div>
-                <div class="border-[1.5px] border-slate-400 rounded-lg h-[50%]"></div>
+                <div class="border-[1.5px] border-slate-400 rounded-lg h-1/2">
+                    <div class="grid place-content-center font-semibold text-lg border-b-[1.5px] border-slate-300 h-[15%] mx-5">Kalender Akademik</div>
+                    <div class="overflow-y-auto sb-hidden h-[85%] mx-7 relative flex justify-center" id="events">
+                        <table class="absolute w-full">
+                            @foreach ($events as $d)
+                            <tr class="border-b-[1.5px] border-dashed">
+                                <td class="text-lg px-1 py-2 w-[45%]">
+                                    <script>
+                                        var bulan = ["Januari", "Februari", "Maret", "April", "Mey", "Juni", "Juli", "Agustus", "September", "Oktober", "November", "Desember"]
+                                        var tanggalMulai = "{{ $d->tanggal_mulai }}";
+                                        var tanggalSelesai = "{{ $d->tanggal_selesai }}"
+
+                                        var dateStart = new Date(tanggalMulai);
+                                        var dateEnd = new Date(tanggalSelesai);
+
+                                        if (tanggalMulai == tanggalSelesai) {
+                                            document.write(dateStart.getDate() + " " + bulan[dateStart.getMonth()])
+                                        } else {
+                                            if (dateStart.getMonth() == dateEnd.getMonth()) {
+                                                document.write(dateStart.getDate() + " - " + dateEnd.getDate() + " " + bulan[dateStart.getMonth()])
+                                            } else {
+                                                document.write(dateStart.getDate() + " " + bulan[dateStart.getMonth()] + " - " + dateEnd.getDate() + " " + bulan[dateEnd.getMonth()])
+                                            }
+                                        }
+                                    </script>
+                                </td>
+                                <td class="text-lg text-center py-2 text-center w-[10%]">:</td>
+                                <td class="text-lg px-1 py-2 w-[45%]">{{ $d->info_akademik }}</td>
+                            </tr>
+                            @endforeach
+                        </table>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -260,6 +292,40 @@
             lastPosition = position;
 
             guruToday.scrollBy(0, -1);
+        }, 30);
+    }
+
+    function scrollDownKA() {
+        var lastPosition;
+
+        var interval = setInterval (() => {
+            var events = document.getElementById("events");
+            position = events.scrollTop;
+
+            if(position === lastPosition){
+                clearInterval(interval);
+                setTimeout(scrollUpKA, 1000);
+            };
+            lastPosition = position;
+
+            events.scrollBy(0, 1);
+        }, 20);
+    }
+
+    function scrollUpKA() {
+        var lastPosition;
+
+        var interval = setInterval (() => {
+            var events = document.getElementById("events");
+            position = events.scrollTop;
+
+            if(position === lastPosition){
+                clearInterval(interval);
+                setTimeout(scrollDownKA, 1000);
+            };
+            lastPosition = position;
+
+            events.scrollBy(0, -1);
         }, 30);
     }
 </script>

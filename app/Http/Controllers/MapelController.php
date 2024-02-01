@@ -2,20 +2,18 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\JadwalModel;
 use App\Models\MapelModel;
-use App\Models\GuruModel;
 use Illuminate\Http\Request;
 
-class JadwalController extends Controller
+class MapelController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $jadwal = JadwalModel::with('mapel')->get();
-        return view('jadwal.index', compact('jadwal'));
+        $mapel = MapelModel::with('guru')->get();
+        return view('mapel.index', compact('mapel'));
     }
 
     /**
@@ -37,7 +35,7 @@ class JadwalController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(JadwalModel $jadwalModel)
+    public function show(MapelModel $mapelModel)
     {
         //
     }
@@ -45,7 +43,7 @@ class JadwalController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(JadwalModel $jadwalModel)
+    public function edit(MapelModel $mapelModel)
     {
         //
     }
@@ -53,7 +51,7 @@ class JadwalController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, JadwalModel $jadwalModel)
+    public function update(Request $request, MapelModel $mapelModel)
     {
         //
     }
@@ -61,7 +59,7 @@ class JadwalController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(JadwalModel $jadwalModel)
+    public function destroy(MapelModel $mapelModel)
     {
         //
     }

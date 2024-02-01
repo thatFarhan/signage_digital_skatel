@@ -14,4 +14,5 @@ class GuruModel extends Model
         'nama_guru',
         'warna'
     ];
+    public $timestamps = false;
 }
