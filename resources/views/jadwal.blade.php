@@ -144,7 +144,7 @@
                                         }
                                     </script>
                                 </td>
-                                <td class="text-lg text-center py-2 text-center w-[10%]">:</td>
+                                <td class="text-lg text-center py-2 w-[10%]">:</td>
                                 <td class="text-lg px-1 py-2 w-[45%]">{{ $d->info_akademik }}</td>
                             </tr>
                             @endforeach
@@ -270,7 +270,7 @@
 
             if(position === lastPosition){
                 clearInterval(interval);
-                setTimeout(scrollUpGT, 1000);
+                setTimeout(scrollUpGT, 2000);
             };
             lastPosition = position;
 
@@ -287,7 +287,7 @@
 
             if(position === lastPosition){
                 clearInterval(interval);
-                setTimeout(scrollDownGT, 1000);
+                setTimeout(scrollDownGT, 2000);
             };
             lastPosition = position;
 
@@ -304,7 +304,7 @@
 
             if(position === lastPosition){
                 clearInterval(interval);
-                setTimeout(scrollUpKA, 1000);
+                setTimeout(scrollUpKA, 2000);
             };
             lastPosition = position;
 
@@ -321,7 +321,7 @@
 
             if(position === lastPosition){
                 clearInterval(interval);
-                setTimeout(scrollDownKA, 1000);
+                setTimeout(scrollDownKA, 2000);
             };
             lastPosition = position;
 

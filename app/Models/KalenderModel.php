@@ -15,4 +15,5 @@ class KalenderModel extends Model
         'tanggal_mulai',
         'tanggal_selesai'
     ];
+    public $timestamps = false;
 }

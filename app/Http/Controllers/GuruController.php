@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\GuruModel;
 use Illuminate\Http\Request;
+use Illuminate\Database\QueryException;
 
 class GuruController extends Controller
 {
@@ -69,8 +70,21 @@ class GuruController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(GuruModel $guruModel)
+    public function destroy(string $id)
     {
-        //
+        $guru = GuruModel::find($id);
+        try {
+            $guru->delete();
+            
+            return redirect()->back();
+        } catch (QueryException $e) {
+            if ($e->errorInfo[1] == 1451) {
+                // Error code 1451 represents a foreign key constraint violation
+                return redirect()->back()->with('warning', 'Tidak bisa dihapus karena ada mapel yang terhubung.');
+            } else {
+                // Handle other exceptions
+                return redirect()->back()->with('error', 'An error occurred while deleting the record.');
+            }
+        }
     }
 }

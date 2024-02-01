@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\MapelModel;
+use App\Models\GuruModel;
 use Illuminate\Http\Request;
+use Illuminate\Database\QueryException;
 
 class MapelController extends Controller
 {
@@ -21,7 +23,8 @@ class MapelController extends Controller
      */
     public function create()
     {
-        //
+        $guru = GuruModel::get();
+        return view('mapel.create', compact('guru'));
     }
 
     /**
@@ -29,7 +32,11 @@ class MapelController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        MapelModel::create([
+            'nama_mapel' => $request->nama_mapel,
+            'id_guru' => $request->id_guru,
+        ]);
+        return redirect()->route('mapel.index');
     }
 
     /**
@@ -43,24 +50,44 @@ class MapelController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(MapelModel $mapelModel)
+    public function edit(string $id)
     {
-        //
+        $mapel = MapelModel::findOrFail($id);
+        $guru = GuruModel::get();
+        return view('mapel.edit', compact('mapel', 'guru'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, MapelModel $mapelModel)
+    public function update(Request $request, string $id)
     {
-        //
+        $mapel = MapelModel::findOrFail($id);
+        $mapel->update ([
+            'nama_mapel' => $request->nama_mapel,
+            'id_guru' => $request->id_guru
+        ]);
+        return redirect()->route('mapel.index');
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(MapelModel $mapelModel)
+    public function destroy(string $id)
     {
-        //
+        $mapel = MapelModel::find($id);
+        try {
+            $mapel->delete();
+            
+            return redirect()->back();
+        } catch (QueryException $e) {
+            if ($e->errorInfo[1] == 1451) {
+                // Error code 1451 represents a foreign key constraint violation
+                return redirect()->back()->with('warning', 'Tidak bisa dihapus karena ada jadwal yang terhubung.');
+            } else {
+                // Handle other exceptions
+                return redirect()->back()->with('error', 'An error occurred while deleting the record.');
+            }
+        }
     }
 }

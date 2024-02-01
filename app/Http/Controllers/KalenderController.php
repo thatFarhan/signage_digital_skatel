@@ -21,7 +21,7 @@ class KalenderController extends Controller
      */
     public function create()
     {
-        //
+        return view('kalender.create');
     }
 
     /**
@@ -29,7 +29,12 @@ class KalenderController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        KalenderModel::create([
+            'info_akademik' => $request->info_akademik,
+            'tanggal_mulai' => $request->tanggal_mulai,
+            'tanggal_selesai' => $request->tanggal_selesai
+        ]);
+        return redirect()->route('kalender.index');
     }
 
     /**
@@ -43,24 +48,34 @@ class KalenderController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(KalenderModel $kalenderModel)
+    public function edit(string $id)
     {
-        //
+        $kalender = KalenderModel::findOrFail($id);
+        return view('kalender.edit', compact('kalender'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, KalenderModel $kalenderModel)
+    public function update(Request $request, string $id)
     {
-        //
+        $kalender = KalenderModel::findOrFail($id);
+        $kalender->update([
+            'info_akademik' => $request->info_akademik,
+            'tanggal_mulai' => $request->tanggal_mulai,
+            'tanggal_selesai' => $request->tanggal_selesai
+        ]);
+        return redirect()->route('kalender.index');
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(KalenderModel $kalenderModel)
+    public function destroy(string $id)
     {
-        //
+        $kalender = KalenderModel::find($id);
+        $kalender->delete();
+
+        return redirect()->back();
     }
 }

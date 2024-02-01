@@ -5,7 +5,7 @@
         Tambah Guru
     </div>
     <div class="">
-        <form action="{{ route('guru.store') }}" method="post" class="t">
+        <form action="{{ route('guru.store') }}" method="post" class="">
             @csrf
             <div class="py-5">
                 <table>
@@ -15,7 +15,7 @@
                     </tr>
                     <tr>
                         <td class="p-2">Warna:</td>
-                        <td class="p-2"><input type="text" name="warna" id="" class="border-[1.5px] border-slate-300 p-2 rounded-lg w-60" data-coloris></td>
+                        <td class="p-2"><input type="text" name="warna" id="" class="border-[1.5px] border-slate-300 p-2 rounded-lg w-60 text-black" data-coloris></td>
                     </tr>
                 </table>
             </div>

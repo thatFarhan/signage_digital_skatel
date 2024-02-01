@@ -5,7 +5,7 @@
         Edit Guru
     </div>
     <div class="">
-        <form action="{{ route('guru.update', $guru->id_guru) }}" method="post" class="t">
+        <form action="{{ route('guru.update', $guru->id_guru) }}" method="post" class="">
             @csrf
             @method('PUT')
             <div class="py-5">
@@ -16,12 +16,12 @@
                     </tr>
                     <tr>
                         <td class="p-2">Warna:</td>
-                        <td class="p-2"><input type="text" name="warna" id="" value="{{ old('warna', $guru->warna) }}" class="border-[1.5px] border-slate-300 p-2 rounded-lg w-60" data-coloris></td>
+                        <td class="p-2"><input type="text" name="warna" id="" value="{{ old('warna', $guru->warna) }}" class="border-[1.5px] border-slate-300 p-2 rounded-lg w-60 text-black" data-coloris></td>
                     </tr>
                 </table>
             </div>
             <div class="text-center">
-                <button type="submit" class="bg-black text-white py-2 px-5 rounded-full hover:bg-white hover:text-black transition border border-black">Update</button>
+                <button type="submit" class="bg-black text-white py-2 px-5 rounded-full hover:bg-white hover:text-black transition border border-black">Simpan</button>
             </div>
         </form>
     </div>

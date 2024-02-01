@@ -15,6 +15,7 @@ class MapelModel extends Model
         'nama_mapel',
         'id_guru'
     ];
+    public $timestamps = false;
 
     public function guru()
     {
