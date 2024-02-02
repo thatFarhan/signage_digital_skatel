@@ -2,7 +2,10 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\GuruController;
+use App\Http\Controllers\SignageController;
 use App\Http\Controllers\JadwalController;
+use App\Http\Controllers\MapelController;
+use App\Http\Controllers\KalenderController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,4 +22,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('signage', [SignageController::class, 'index'])->name('signage.index');
+
 Route::resource('jadwal', JadwalController::class);
+Route::resource('guru', GuruController::class);
+Route::resource('mapel', MapelController::class);
+Route::resource('kalender', KalenderController::class);
