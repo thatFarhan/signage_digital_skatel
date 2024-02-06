@@ -4,9 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
-    <link href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" rel="stylesheet">
-    @vite('resources/css/app.css')
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
     <title>Document</title>
 </head>
 <body class="font-inter" onload="[startTime(), highlightJP(), scrollDownGT(), scrollDownKA()]">
@@ -29,7 +27,7 @@
                       <div class="splide__track flex">
                           <ul class="splide__pagination hidden"></ul>
                           <ul class="splide__list flex">
-                              <li class="splide__slide flex" data-splide-interval="10000">
+                              <li class="splide__slide flex">
                                 <div class="grid grid-cols-[repeat(13,minmax(0,1fr))] border border-slate-400 rounded-lg col-span-2 break-all">
                                     <div class="grid grid-rows-8">
                                         <div class="border border-slate-400 text-center p-2 grid place-items-center text-2xl rounded-tl-lg"></div>
@@ -42,67 +40,67 @@
                                         <div class="border border-slate-400 text-center p-2 grid place-items-center text-2xl rounded-bl-lg">X G</div>
                                     </div>
                                     <div class="grid grid-rows-8">
-                                        <div id="jp1" class="border border-slate-400 text-center p-2 grid place-items-center text-2xl">1</div>
+                                        <div id="jp1X" class="border border-slate-400 text-center p-2 grid place-items-center text-2xl">1</div>
                                         @foreach ($jadwalX1 as $d)
                                             <div class="border border-slate-400 text-center p-2 grid place-items-center" style="background-color: {{$d->mapel->guru->warna}}">{{$d->mapel->nama_mapel}}</div>
                                         @endforeach
                                     </div>
                                     <div class="grid grid-rows-8">
-                                        <div id="jp2" class="border border-slate-400 text-center p-2 grid place-items-center text-2xl">2</div>
+                                        <div id="jp2X" class="border border-slate-400 text-center p-2 grid place-items-center text-2xl">2</div>
                                         @foreach ($jadwalX2 as $d)
                                             <div class="border border-slate-400 text-center p-2 grid place-items-center" style="background-color: {{$d->mapel->guru->warna}}">{{$d->mapel->nama_mapel}}</div>
                                         @endforeach
                                     </div>
                                     <div class="grid grid-rows-8">
-                                        <div id="jp3" class="border border-slate-400 text-center p-2 grid place-items-center text-2xl">3</div>
+                                        <div id="jp3X" class="border border-slate-400 text-center p-2 grid place-items-center text-2xl">3</div>
                                         @foreach ($jadwalX3 as $d)
                                             <div class="border border-slate-400 text-center p-2 grid place-items-center" style="background-color: {{$d->mapel->guru->warna}}">{{$d->mapel->nama_mapel}}</div>
                                         @endforeach
                                     </div>
-                                    <div id="break1" class="border border-slate-400 grid place-content-center">
+                                    <div id="break1X" class="border border-slate-400 grid place-content-center">
                                         <div class="-rotate-90 text-center text-3xl w-96">Break</div>
                                     </div>
                                     <div class="grid grid-rows-8">
-                                        <div id="jp4" class="border border-slate-400 text-center p-2 grid place-items-center text-2xl">4</div>
+                                        <div id="jp4X" class="border border-slate-400 text-center p-2 grid place-items-center text-2xl">4</div>
                                         @foreach ($jadwalX4 as $d)
                                             <div class="border border-slate-400 text-center p-2 grid place-items-center" style="background-color: {{$d->mapel->guru->warna}}">{{$d->mapel->nama_mapel}}</div>
                                         @endforeach
                                     </div>
                                     <div class="grid grid-rows-8">
-                                        <div id="jp5" class="border border-slate-400 text-center p-2 grid place-items-center text-2xl">5</div>
+                                        <div id="jp5X" class="border border-slate-400 text-center p-2 grid place-items-center text-2xl">5</div>
                                         @foreach ($jadwalX5 as $d)
                                             <div class="border border-slate-400 text-center p-2 grid place-items-center" style="background-color: {{$d->mapel->guru->warna}}">{{$d->mapel->nama_mapel}}</div>
                                         @endforeach
                                     </div>
                                     <div class="grid grid-rows-8">
-                                        <div id="jp6" class="border border-slate-400 text-center p-2 grid place-items-center text-2xl">6</div>
+                                        <div id="jp6X" class="border border-slate-400 text-center p-2 grid place-items-center text-2xl">6</div>
                                         @foreach ($jadwalX6 as $d)
                                             <div class="border border-slate-400 text-center p-2 grid place-items-center" style="background-color: {{$d->mapel->guru->warna}}">{{$d->mapel->nama_mapel}}</div>
                                         @endforeach
                                     </div>
-                                    <div id="break2" class="border border-slate-400 grid place-content-center">
+                                    <div id="break2X" class="border border-slate-400 grid place-content-center">
                                         <div class="-rotate-90 text-center text-3xl w-96">Break</div>
                                     </div>
                                     <div class="grid grid-rows-8">
-                                        <div id="jp7" class="border border-slate-400 text-center p-2 grid place-items-center text-2xl">7</div>
+                                        <div id="jp7X" class="border border-slate-400 text-center p-2 grid place-items-center text-2xl">7</div>
                                         @foreach ($jadwalX7 as $d)
                                             <div class="border border-slate-400 text-center p-2 grid place-items-center" style="background-color: {{$d->mapel->guru->warna}}">{{$d->mapel->nama_mapel}}</div>
                                         @endforeach
                                     </div>
                                     <div class="grid grid-rows-8">
-                                        <div id="jp8" class="border border-slate-400 text-center p-2 grid place-items-center text-2xl">8</div>
+                                        <div id="jp8X" class="border border-slate-400 text-center p-2 grid place-items-center text-2xl">8</div>
                                         @foreach ($jadwalX8 as $d)
                                             <div class="border border-slate-400 text-center p-2 grid place-items-center" style="background-color: {{$d->mapel->guru->warna}}">{{$d->mapel->nama_mapel}}</div>
                                         @endforeach
                                     </div>
                                     <div class="grid grid-rows-8">
-                                        <div id="jp9" class="border border-slate-400 text-center p-2 grid place-items-center text-2xl">9</div>
+                                        <div id="jp9X" class="border border-slate-400 text-center p-2 grid place-items-center text-2xl">9</div>
                                         @foreach ($jadwalX9 as $d)
                                             <div class="border border-slate-400 text-center p-2 grid place-items-center" style="background-color: {{$d->mapel->guru->warna}}">{{$d->mapel->nama_mapel}}</div>
                                         @endforeach
                                     </div>
                                     <div class="grid grid-rows-8">
-                                        <div id="jp10" class="border border-slate-400 text-center p-2 grid place-items-center text-2xl rounded-tr-lg">10</div>
+                                        <div id="jp10X" class="border border-slate-400 text-center p-2 grid place-items-center text-2xl rounded-tr-lg">10</div>
                                         @foreach ($jadwalX10 as $d)
                                             @if($loop->index != 6)
                                                 <div class="border border-slate-400 text-center p-2 grid place-items-center" style="background-color: {{$d->mapel->guru->warna}}">{{$d->mapel->nama_mapel}}</div>
@@ -114,81 +112,81 @@
                                 </div>
                               </li>
 
-                              <li class="splide__slide flex" data-splide-interval="10000">
+                              <li class="splide__slide flex">
                                 <div class="grid grid-cols-[repeat(13,minmax(0,1fr))] border border-slate-400 rounded-lg col-span-2 break-all">
                                     <div class="grid grid-rows-8">
-                                        <div class="border border-slate-400 text-center p-2 grid place-items-center rounded-tl-lg"></div>
-                                        <div class="border border-slate-400 text-center p-2 grid place-items-center">XIA</div>
-                                        <div class="border border-slate-400 text-center p-2 grid place-items-center">XIB</div>
-                                        <div class="border border-slate-400 text-center p-2 grid place-items-center">XIC</div>
-                                        <div class="border border-slate-400 text-center p-2 grid place-items-center">XID</div>
-                                        <div class="border border-slate-400 text-center p-2 grid place-items-center">XIE</div>
-                                        <div class="border border-slate-400 text-center p-2 grid place-items-center">XIF</div>
-                                        <div class="border border-slate-400 text-center p-2 grid place-items-center rounded-bl-lg">XIG</div>
+                                        <div class="border border-slate-400 text-center p-2 grid place-items-center text-2xl rounded-tl-lg"></div>
+                                        <div class="border border-slate-400 text-center p-2 grid place-items-center text-2xl">XI A</div>
+                                        <div class="border border-slate-400 text-center p-2 grid place-items-center text-2xl">XI B</div>
+                                        <div class="border border-slate-400 text-center p-2 grid place-items-center text-2xl">XI C</div>
+                                        <div class="border border-slate-400 text-center p-2 grid place-items-center text-2xl">XI D</div>
+                                        <div class="border border-slate-400 text-center p-2 grid place-items-center text-2xl">XI E</div>
+                                        <div class="border border-slate-400 text-center p-2 grid place-items-center text-2xl">XI F</div>
+                                        <div class="border border-slate-400 text-center p-2 grid place-items-center text-2xl rounded-bl-lg">XI G</div>
                                     </div>
                                     <div class="grid grid-rows-8">
-                                        <div id="jp1" class="border border-slate-400 text-center p-2 grid place-items-center">1</div>
-                                        @foreach ($jadwalX1 as $d)
+                                        <div id="jp1XI" class="border border-slate-400 text-center p-2 grid place-items-center text-2xl">1</div>
+                                        @foreach ($jadwalXI1 as $d)
                                             <div class="border border-slate-400 text-center p-2 grid place-items-center" style="background-color: {{$d->mapel->guru->warna}}">{{$d->mapel->nama_mapel}}</div>
                                         @endforeach
                                     </div>
                                     <div class="grid grid-rows-8">
-                                        <div id="jp2" class="border border-slate-400 text-center p-2 grid place-items-center">2</div>
-                                        @foreach ($jadwalX2 as $d)
+                                        <div id="jp2XI" class="border border-slate-400 text-center p-2 grid place-items-center text-2xl">2</div>
+                                        @foreach ($jadwalXI2 as $d)
                                             <div class="border border-slate-400 text-center p-2 grid place-items-center" style="background-color: {{$d->mapel->guru->warna}}">{{$d->mapel->nama_mapel}}</div>
                                         @endforeach
                                     </div>
                                     <div class="grid grid-rows-8">
-                                        <div id="jp3" class="border border-slate-400 text-center p-2 grid place-items-center">3</div>
-                                        @foreach ($jadwalX3 as $d)
+                                        <div id="jp3XI" class="border border-slate-400 text-center p-2 grid place-items-center text-2xl">3</div>
+                                        @foreach ($jadwalXI3 as $d)
                                             <div class="border border-slate-400 text-center p-2 grid place-items-center" style="background-color: {{$d->mapel->guru->warna}}">{{$d->mapel->nama_mapel}}</div>
                                         @endforeach
                                     </div>
-                                    <div id="break1" class="border border-slate-400 grid place-content-center">
+                                    <div id="break1XI" class="border border-slate-400 grid place-content-center">
                                         <div class="-rotate-90 text-center text-3xl w-96">Break</div>
                                     </div>
                                     <div class="grid grid-rows-8">
-                                        <div id="jp4" class="border border-slate-400 text-center p-2 grid place-items-center">4</div>
-                                        @foreach ($jadwalX4 as $d)
+                                        <div id="jp4XI" class="border border-slate-400 text-center p-2 grid place-items-center text-2xl">4</div>
+                                        @foreach ($jadwalXI4 as $d)
                                             <div class="border border-slate-400 text-center p-2 grid place-items-center" style="background-color: {{$d->mapel->guru->warna}}">{{$d->mapel->nama_mapel}}</div>
                                         @endforeach
                                     </div>
                                     <div class="grid grid-rows-8">
-                                        <div id="jp5" class="border border-slate-400 text-center p-2 grid place-items-center">5</div>
-                                        @foreach ($jadwalX5 as $d)
+                                        <div id="jp5XI" class="border border-slate-400 text-center p-2 grid place-items-center text-2xl">5</div>
+                                        @foreach ($jadwalXI5 as $d)
                                             <div class="border border-slate-400 text-center p-2 grid place-items-center" style="background-color: {{$d->mapel->guru->warna}}">{{$d->mapel->nama_mapel}}</div>
                                         @endforeach
                                     </div>
                                     <div class="grid grid-rows-8">
-                                        <div id="jp6" class="border border-slate-400 text-center p-2 grid place-items-center">6</div>
-                                        @foreach ($jadwalX6 as $d)
+                                        <div id="jp6XI" class="border border-slate-400 text-center p-2 grid place-items-center text-2xl">6</div>
+                                        @foreach ($jadwalXI6 as $d)
                                             <div class="border border-slate-400 text-center p-2 grid place-items-center" style="background-color: {{$d->mapel->guru->warna}}">{{$d->mapel->nama_mapel}}</div>
                                         @endforeach
                                     </div>
-                                    <div id="break2" class="border border-slate-400 grid place-content-center">
+                                    <div id="break2XI" class="border border-slate-400 grid place-content-center">
                                         <div class="-rotate-90 text-center text-3xl w-96">Break</div>
                                     </div>
                                     <div class="grid grid-rows-8">
-                                        <div id="jp7" class="border border-slate-400 text-center p-2 grid place-items-center">7</div>
-                                        @foreach ($jadwalX7 as $d)
+                                        <div id="jp7XI" class="border border-slate-400 text-center p-2 grid place-items-center text-2xl">7</div>
+                                        @foreach ($jadwalXI7 as $d)
                                             <div class="border border-slate-400 text-center p-2 grid place-items-center" style="background-color: {{$d->mapel->guru->warna}}">{{$d->mapel->nama_mapel}}</div>
                                         @endforeach
                                     </div>
                                     <div class="grid grid-rows-8">
-                                        <div id="jp8" class="border border-slate-400 text-center p-2 grid place-items-center">8</div>
-                                        @foreach ($jadwalX8 as $d)
+                                        <div id="jp8XI" class="border border-slate-400 text-center p-2 grid place-items-center text-2xl">8</div>
+                                        @foreach ($jadwalXI8 as $d)
                                             <div class="border border-slate-400 text-center p-2 grid place-items-center" style="background-color: {{$d->mapel->guru->warna}}">{{$d->mapel->nama_mapel}}</div>
                                         @endforeach
                                     </div>
                                     <div class="grid grid-rows-8">
-                                        <div id="jp9" class="border border-slate-400 text-center p-2 grid place-items-center">9</div>
-                                        @foreach ($jadwalX9 as $d)
+                                        <div id="jp9XI" class="border border-slate-400 text-center p-2 grid place-items-center text-2xl">9</div>
+                                        @foreach ($jadwalXI9 as $d)
                                             <div class="border border-slate-400 text-center p-2 grid place-items-center" style="background-color: {{$d->mapel->guru->warna}}">{{$d->mapel->nama_mapel}}</div>
                                         @endforeach
                                     </div>
                                     <div class="grid grid-rows-8">
-                                        <div id="jp10" class="border border-slate-400 text-center p-2 grid place-items-center rounded-tr-lg">10</div>
-                                        @foreach ($jadwalX10 as $d)
+                                        <div id="jp10XI" class="border border-slate-400 text-center p-2 grid place-items-center text-2xl rounded-tr-lg">10</div>
+                                        @foreach ($jadwalXI10 as $d)
                                             @if($loop->index != 6)
                                                 <div class="border border-slate-400 text-center p-2 grid place-items-center" style="background-color: {{$d->mapel->guru->warna}}">{{$d->mapel->nama_mapel}}</div>
                                             @else
@@ -199,81 +197,81 @@
                                 </div>
                               </li>
 
-                              <li class="splide__slide flex" data-splide-interval="10000">
+                              <li class="splide__slide flex">
                                 <div class="grid grid-cols-[repeat(13,minmax(0,1fr))] border border-slate-400 rounded-lg col-span-2 break-all">
                                     <div class="grid grid-rows-8">
-                                        <div class="border border-slate-400 text-center p-2 grid place-items-center rounded-tl-lg"></div>
-                                        <div class="border border-slate-400 text-center p-2 grid place-items-center">XIIA</div>
-                                        <div class="border border-slate-400 text-center p-2 grid place-items-center">XIIB</div>
-                                        <div class="border border-slate-400 text-center p-2 grid place-items-center">XIIC</div>
-                                        <div class="border border-slate-400 text-center p-2 grid place-items-center">XIID</div>
-                                        <div class="border border-slate-400 text-center p-2 grid place-items-center">XIIE</div>
-                                        <div class="border border-slate-400 text-center p-2 grid place-items-center">XIIF</div>
-                                        <div class="border border-slate-400 text-center p-2 grid place-items-center rounded-bl-lg">XIIG</div>
+                                        <div class="border border-slate-400 text-center p-2 grid place-items-center text-2xl rounded-tl-lg"></div>
+                                        <div class="border border-slate-400 text-center p-2 grid place-items-center text-2xl">XII A</div>
+                                        <div class="border border-slate-400 text-center p-2 grid place-items-center text-2xl">XII B</div>
+                                        <div class="border border-slate-400 text-center p-2 grid place-items-center text-2xl">XII C</div>
+                                        <div class="border border-slate-400 text-center p-2 grid place-items-center text-2xl">XII D</div>
+                                        <div class="border border-slate-400 text-center p-2 grid place-items-center text-2xl">XII E</div>
+                                        <div class="border border-slate-400 text-center p-2 grid place-items-center text-2xl">XII F</div>
+                                        <div class="border border-slate-400 text-center p-2 grid place-items-center text-2xl rounded-bl-lg">XII G</div>
                                     </div>
                                     <div class="grid grid-rows-8">
-                                        <div id="jp1" class="border border-slate-400 text-center p-2 grid place-items-center">1</div>
-                                        @foreach ($jadwalX1 as $d)
+                                        <div id="jp1XII" class="border border-slate-400 text-center p-2 grid place-items-center text-2xl">1</div>
+                                        @foreach ($jadwalXII1 as $d)
                                             <div class="border border-slate-400 text-center p-2 grid place-items-center" style="background-color: {{$d->mapel->guru->warna}}">{{$d->mapel->nama_mapel}}</div>
                                         @endforeach
                                     </div>
                                     <div class="grid grid-rows-8">
-                                        <div id="jp2" class="border border-slate-400 text-center p-2 grid place-items-center">2</div>
-                                        @foreach ($jadwalX2 as $d)
+                                        <div id="jp2XII" class="border border-slate-400 text-center p-2 grid place-items-center text-2xl">2</div>
+                                        @foreach ($jadwalXII2 as $d)
                                             <div class="border border-slate-400 text-center p-2 grid place-items-center" style="background-color: {{$d->mapel->guru->warna}}">{{$d->mapel->nama_mapel}}</div>
                                         @endforeach
                                     </div>
                                     <div class="grid grid-rows-8">
-                                        <div id="jp3" class="border border-slate-400 text-center p-2 grid place-items-center">3</div>
-                                        @foreach ($jadwalX3 as $d)
+                                        <div id="jp3XII" class="border border-slate-400 text-center p-2 grid place-items-center text-2xl">3</div>
+                                        @foreach ($jadwalXII3 as $d)
                                             <div class="border border-slate-400 text-center p-2 grid place-items-center" style="background-color: {{$d->mapel->guru->warna}}">{{$d->mapel->nama_mapel}}</div>
                                         @endforeach
                                     </div>
-                                    <div id="break1" class="border border-slate-400 grid place-content-center">
+                                    <div id="break1XII" class="border border-slate-400 grid place-content-center">
                                         <div class="-rotate-90 text-center text-3xl w-96">Break</div>
                                     </div>
                                     <div class="grid grid-rows-8">
-                                        <div id="jp4" class="border border-slate-400 text-center p-2 grid place-items-center">4</div>
-                                        @foreach ($jadwalX4 as $d)
+                                        <div id="jp4XII" class="border border-slate-400 text-center p-2 grid place-items-center text-2xl">4</div>
+                                        @foreach ($jadwalXII4 as $d)
                                             <div class="border border-slate-400 text-center p-2 grid place-items-center" style="background-color: {{$d->mapel->guru->warna}}">{{$d->mapel->nama_mapel}}</div>
                                         @endforeach
                                     </div>
                                     <div class="grid grid-rows-8">
-                                        <div id="jp5" class="border border-slate-400 text-center p-2 grid place-items-center">5</div>
-                                        @foreach ($jadwalX5 as $d)
+                                        <div id="jp5XII" class="border border-slate-400 text-center p-2 grid place-items-center text-2xl">5</div>
+                                        @foreach ($jadwalXII5 as $d)
                                             <div class="border border-slate-400 text-center p-2 grid place-items-center" style="background-color: {{$d->mapel->guru->warna}}">{{$d->mapel->nama_mapel}}</div>
                                         @endforeach
                                     </div>
                                     <div class="grid grid-rows-8">
-                                        <div id="jp6" class="border border-slate-400 text-center p-2 grid place-items-center">6</div>
-                                        @foreach ($jadwalX6 as $d)
+                                        <div id="jp6XII" class="border border-slate-400 text-center p-2 grid place-items-center text-2xl">6</div>
+                                        @foreach ($jadwalXII6 as $d)
                                             <div class="border border-slate-400 text-center p-2 grid place-items-center" style="background-color: {{$d->mapel->guru->warna}}">{{$d->mapel->nama_mapel}}</div>
                                         @endforeach
                                     </div>
-                                    <div id="break2" class="border border-slate-400 grid place-content-center">
+                                    <div id="break2XII" class="border border-slate-400 grid place-content-center">
                                         <div class="-rotate-90 text-center text-3xl w-96">Break</div>
                                     </div>
                                     <div class="grid grid-rows-8">
-                                        <div id="jp7" class="border border-slate-400 text-center p-2 grid place-items-center">7</div>
-                                        @foreach ($jadwalX7 as $d)
+                                        <div id="jp7XII" class="border border-slate-400 text-center p-2 grid place-items-center text-2xl">7</div>
+                                        @foreach ($jadwalXII7 as $d)
                                             <div class="border border-slate-400 text-center p-2 grid place-items-center" style="background-color: {{$d->mapel->guru->warna}}">{{$d->mapel->nama_mapel}}</div>
                                         @endforeach
                                     </div>
                                     <div class="grid grid-rows-8">
-                                        <div id="jp8" class="border border-slate-400 text-center p-2 grid place-items-center">8</div>
-                                        @foreach ($jadwalX8 as $d)
+                                        <div id="jp8XII" class="border border-slate-400 text-center p-2 grid place-items-center text-2xl">8</div>
+                                        @foreach ($jadwalXII8 as $d)
                                             <div class="border border-slate-400 text-center p-2 grid place-items-center" style="background-color: {{$d->mapel->guru->warna}}">{{$d->mapel->nama_mapel}}</div>
                                         @endforeach
                                     </div>
                                     <div class="grid grid-rows-8">
-                                        <div id="jp9" class="border border-slate-400 text-center p-2 grid place-items-center">9</div>
-                                        @foreach ($jadwalX9 as $d)
+                                        <div id="jp9XII" class="border border-slate-400 text-center p-2 grid place-items-center text-2xl">9</div>
+                                        @foreach ($jadwalXII9 as $d)
                                             <div class="border border-slate-400 text-center p-2 grid place-items-center" style="background-color: {{$d->mapel->guru->warna}}">{{$d->mapel->nama_mapel}}</div>
                                         @endforeach
                                     </div>
                                     <div class="grid grid-rows-8">
-                                        <div id="jp10" class="border border-slate-400 text-center p-2 grid place-items-center rounded-tr-lg">10</div>
-                                        @foreach ($jadwalX10 as $d)
+                                        <div id="jp10XII" class="border border-slate-400 text-center p-2 grid place-items-center text-2xl rounded-tr-lg">10</div>
+                                        @foreach ($jadwalXII10 as $d)
                                             @if($loop->index != 6)
                                                 <div class="border border-slate-400 text-center p-2 grid place-items-center" style="background-color: {{$d->mapel->guru->warna}}">{{$d->mapel->nama_mapel}}</div>
                                             @else
@@ -367,92 +365,6 @@
       return i;
     }
 
-    function highlightJP() {
-        var jp1 = document.getElementById("jp1");
-        var jp2 = document.getElementById("jp2");
-        var jp3 = document.getElementById("jp3");
-        var jp4 = document.getElementById("jp4");
-        var jp5 = document.getElementById("jp5");
-        var jp6 = document.getElementById("jp6");
-        var jp7 = document.getElementById("jp7");
-        var jp8 = document.getElementById("jp8");
-        var jp9 = document.getElementById("jp9");
-        var jp10 = document.getElementById("jp10");
-        
-        var break1 = document.getElementById("break1");
-        var break2 = document.getElementById("break2");
-
-        let currentJp = null;
-        let previousJp = null;
-
-        const today = new Date();
-        let h = today.getHours();
-        let m = today.getMinutes();
-
-        let hoursToMinutes = h * 60;
-
-        let timeInMinutes = hoursToMinutes + m;
-
-        if (timeInMinutes >= 450 && timeInMinutes <= 494) {
-            currentJp = jp1;
-        }
-        if (timeInMinutes >= 495 && timeInMinutes <= 539) {
-            currentJp = jp2;
-            previousJp = jp1;
-        }
-        if (timeInMinutes >= 540 && timeInMinutes <= 584) {
-            currentJp = jp3;
-            previousJp = jp2;
-        }
-        if (timeInMinutes >= 585 && timeInMinutes <= 599) {
-            currentJp = break1;
-            previousJp = jp3;
-        }
-        if (timeInMinutes >= 600 && timeInMinutes <= 644) {
-            currentJp = jp4;
-            previousJp = break1;
-        }
-        if (timeInMinutes >= 645 && timeInMinutes <= 689) {
-            currentJp = jp5;
-            previousJp = jp4;
-        }
-        if (timeInMinutes >= 690 && timeInMinutes <= 734) {
-            currentJp = jp6;
-            previousJp = jp5;
-        }
-        if (timeInMinutes >= 735 && timeInMinutes <= 779) {
-            currentJp = break2;
-            previousJp = jp6;
-        }
-        if (timeInMinutes >= 780 && timeInMinutes <= 824) {
-            currentJp = jp7;
-            previousJp = break2;
-        }
-        if (timeInMinutes >= 825 && timeInMinutes <= 869) {
-            currentJp = jp8;
-            previousJp = jp7;
-        }
-        if (timeInMinutes >= 870 && timeInMinutes <= 914) {
-            currentJp = jp9;
-            previousJp = jp8;
-        }
-        if (timeInMinutes >= 915 && timeInMinutes <= 960) {
-            currentJp = jp10;
-            previousJp = jp9;
-        }
-
-        if (currentJp != null) {
-            currentJp.classList.add("bg-slate-200");
-            currentJp.classList.add("font-bold");
-
-            if (previousJp != null) {
-                previousJp.classList.remove("bg-slate-200");
-                previousJp.classList.remove("font-bold");
-            }
-            setTimeout(highlightJP, 1000);
-        }
-    }
-
     function scrollDownGT() {
         var lastPosition;
 
@@ -520,18 +432,4 @@
             events.scrollBy(0, -1);
         }, 30);
     }
-</script>
-
-<script>
-   var splide = new Splide( '.splide', {
-  //type    : 'fade',
-  //rewind     : true,
-  //rewindSpeed: 1000,
-  autoplay: true,
-  type    : 'loop',
-  perPage : 1,
-} );
-
-splide.mount();
-
 </script>
