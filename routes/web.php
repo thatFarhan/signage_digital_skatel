@@ -22,8 +22,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('signage', [SignageController::class, 'index'])->name('signage.index');
-
+Route::resource('signage', SignageController::class);
 Route::resource('jadwal', JadwalController::class);
 Route::resource('guru', GuruController::class);
 Route::resource('mapel', MapelController::class);

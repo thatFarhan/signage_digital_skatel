@@ -18,6 +18,7 @@ class JadwalModel extends Model
         'kelas',
         'angkatan'
     ];
+    public $timestamps = false;
 
     public function mapel()
     {

@@ -7,7 +7,7 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     <title>Document</title>
 </head>
-<body class="font-inter" onload="[startTime(), highlightJP(), scrollDownGT(), scrollDownKA()]">
+<body class="font-inter" onload="[startTime(), scrollDownGT(), scrollDownKA()]">
     <div class="flex flex-col h-screen w-screen px-20 py-16">
         <div class="flex justify-between">
             <img src="/asset/img/logo_sekolah.png" alt="" class="h-16">

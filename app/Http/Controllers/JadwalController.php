@@ -6,6 +6,7 @@ use App\Models\JadwalModel;
 use App\Models\MapelModel;
 use App\Models\GuruModel;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class JadwalController extends Controller
 {
@@ -191,17 +192,101 @@ class JadwalController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(JadwalModel $jadwalModel)
+    public function edit(string $kelasAngkatan)
     {
-        //
+        $angkatan = substr($kelasAngkatan, 0, 2);
+        $kelas = substr($kelasAngkatan, 2, 1);
+
+        $jadwal = JadwalModel::with('mapel')
+        ->where('angkatan', '=', $angkatan)
+        ->where('kelas', '=', $kelas)
+        ->orderByRaw('FIELD(hari, "Mon", "Tue", "Wed", "Thu", "Fri")')
+        ->orderBy('jam_pelajaran', 'asc')
+        ->get();
+
+        $mapel = MapelModel::with('guru')->get();
+
+        return view('jadwal.edit', compact('jadwal', 'mapel'))->with('kelasAngkatan', $kelasAngkatan);
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, JadwalModel $jadwalModel)
+    public function update(Request $request, string $kelasAngkatan)
     {
-        //
+        $angkatan = substr($kelasAngkatan, 0, 2);
+        $kelas = substr($kelasAngkatan, 2, 1);
+
+        $jadwalMon = JadwalModel::where('angkatan', '=', $angkatan)
+        ->where('kelas', '=', $kelas)
+        ->where('hari', '=', 'Mon');
+
+        $jadwalTue = JadwalModel::where('angkatan', '=', $angkatan)
+        ->where('kelas', '=', $kelas)
+        ->where('hari', '=', 'Tue');
+
+        $jadwalWed = JadwalModel::where('angkatan', '=', $angkatan)
+        ->where('kelas', '=', $kelas)
+        ->where('hari', '=', 'Wed');
+
+        $jadwalThu = JadwalModel::where('angkatan', '=', $angkatan)
+        ->where('kelas', '=', $kelas)
+        ->where('hari', '=', 'Thu');
+
+        $jadwalFri = JadwalModel::where('angkatan', '=', $angkatan)
+        ->where('kelas', '=', $kelas)
+        ->where('hari', '=', 'Fri');
+
+        DB::transaction(function () use($jadwalMon, $request) {
+            for ($i = 1; $i <= 10; $i++) {
+                $jadwalMonClone = clone $jadwalMon;
+                $jadwalMonClone->where('jam_pelajaran', '=', $i)->update([
+                    'id_mapel' => $request->$i
+                ]);
+            }
+        });
+
+        DB::transaction(function () use($jadwalTue, $request) {
+            for ($i = 1; $i <= 10; $i++) {
+                $selectBox = $i + 10;
+                $jadwalTueClone = clone $jadwalTue;
+                $jadwalTueClone->where('jam_pelajaran', '=', $i)->update([
+                    'id_mapel' => $request->$selectBox
+                ]);
+            }
+        });
+
+        DB::transaction(function () use($jadwalWed, $request) {
+            for ($i = 1; $i <= 10; $i++) {
+                $selectBox = $i + 20;
+                $jadwalWedClone = clone $jadwalWed;
+                $jadwalWedClone->where('jam_pelajaran', '=', $i)->update([
+                    'id_mapel' => $request->$selectBox
+                ]);
+            }
+        });
+
+        DB::transaction(function () use($jadwalThu, $request) {
+            for ($i = 1; $i <= 10; $i++) {
+                $selectBox = $i + 30;
+                $jadwalThuClone = clone $jadwalThu;
+                $jadwalThuClone->where('jam_pelajaran', '=', $i)->update([
+                    'id_mapel' => $request->$selectBox
+                ]);
+            }
+        });
+
+        DB::transaction(function () use($jadwalFri, $request) {
+            for ($i = 1; $i <= 10; $i++) {
+                $selectBox = $i + 40;
+                $jadwalFriClone = clone $jadwalFri;
+                $jadwalFriClone->where('jam_pelajaran', '=', $i)->update([
+                    'id_mapel' => $request->$selectBox
+                ]);
+            }
+        });
+
+        return redirect()->route('jadwal.index');
     }
 
     /**
