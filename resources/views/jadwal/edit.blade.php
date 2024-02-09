@@ -1,7 +1,8 @@
 @extends('layout.menu')
 @section('content')
-<div class="text-center w-4/5">
+<div class="text-center bg-white p-5 rounded-lg border-[1.5px] border-slate-400 w-4/5">
     <h1 class="text-2xl font-bold mb-5">
+        Edit Jadwal - 
         <script>
             var angkatan = "{{ substr($kelasAngkatan, 0, 2) }}";
             if (angkatan == "10") {

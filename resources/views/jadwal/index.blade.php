@@ -1,6 +1,6 @@
 @extends('layout.menu')
 @section('content')
-<div class="w-3/4 h-screen overflow-auto text-center">
+<div class="w-full h-screen overflow-auto text-center">
     <div class="flex justify-center items-center gap-3">
         <h1 class="text-2xl font-bold my-5">X A</h1>
         <div class="w-fit h-fit bg-green-400 hover:bg-green-500 transition p-2 rounded-md">
@@ -11,7 +11,7 @@
             </a>
         </div>
     </div>
-    <div class="flex">
+    <div class="flex w-4/5 mx-auto">
         <div class="grid grid-rows-6 border-y border-l border-slate-400 bg-white">
             <div class="border border-slate-400 py-2 px-5"></div>
             <div class="border border-slate-400 py-2 px-5">Mon</div>
@@ -47,7 +47,7 @@
             </a>
         </div>
     </div>
-    <div class="flex">
+    <div class="flex w-4/5 mx-auto">
         <div class="grid grid-rows-6 border-y border-l border-slate-400 bg-white">
             <div class="border border-slate-400 py-2 px-5"></div>
             <div class="border border-slate-400 py-2 px-5">Mon</div>
@@ -83,7 +83,7 @@
             </a>
         </div>
     </div>
-    <div class="flex">
+    <div class="flex w-4/5 mx-auto">
         <div class="grid grid-rows-6 border-y border-l border-slate-400 bg-white">
             <div class="border border-slate-400 py-2 px-5"></div>
             <div class="border border-slate-400 py-2 px-5">Mon</div>
@@ -119,7 +119,7 @@
             </a>
         </div>
     </div>
-    <div class="flex">
+    <div class="flex w-4/5 mx-auto">
         <div class="grid grid-rows-6 border-y border-l border-slate-400 bg-white">
             <div class="border border-slate-400 py-2 px-5"></div>
             <div class="border border-slate-400 py-2 px-5">Mon</div>
@@ -155,7 +155,7 @@
             </a>
         </div>
     </div>
-    <div class="flex">
+    <div class="flex w-4/5 mx-auto">
         <div class="grid grid-rows-6 border-y border-l border-slate-400 bg-white">
             <div class="border border-slate-400 py-2 px-5"></div>
             <div class="border border-slate-400 py-2 px-5">Mon</div>
@@ -191,7 +191,7 @@
             </a>
         </div>
     </div>
-    <div class="flex">
+    <div class="flex w-4/5 mx-auto">
         <div class="grid grid-rows-6 border-y border-l border-slate-400 bg-white">
             <div class="border border-slate-400 py-2 px-5"></div>
             <div class="border border-slate-400 py-2 px-5">Mon</div>
@@ -227,7 +227,7 @@
             </a>
         </div>
     </div>
-    <div class="flex">
+    <div class="flex w-4/5 mx-auto">
         <div class="grid grid-rows-6 border-y border-l border-slate-400 bg-white">
             <div class="border border-slate-400 py-2 px-5"></div>
             <div class="border border-slate-400 py-2 px-5">Mon</div>
@@ -263,7 +263,7 @@
             </a>
         </div>
     </div>
-    <div class="flex">
+    <div class="flex w-4/5 mx-auto">
         <div class="grid grid-rows-6 border-y border-l border-slate-400 bg-white">
             <div class="border border-slate-400 py-2 px-5"></div>
             <div class="border border-slate-400 py-2 px-5">Mon</div>
@@ -299,7 +299,7 @@
             </a>
         </div>
     </div>
-    <div class="flex">
+    <div class="flex w-4/5 mx-auto">
         <div class="grid grid-rows-6 border-y border-l border-slate-400 bg-white">
             <div class="border border-slate-400 py-2 px-5"></div>
             <div class="border border-slate-400 py-2 px-5">Mon</div>
@@ -335,7 +335,7 @@
             </a>
         </div>
     </div>
-    <div class="flex">
+    <div class="flex w-4/5 mx-auto">
         <div class="grid grid-rows-6 border-y border-l border-slate-400 bg-white">
             <div class="border border-slate-400 py-2 px-5"></div>
             <div class="border border-slate-400 py-2 px-5">Mon</div>
@@ -371,7 +371,7 @@
             </a>
         </div>
     </div>
-    <div class="flex">
+    <div class="flex w-4/5 mx-auto">
         <div class="grid grid-rows-6 border-y border-l border-slate-400 bg-white">
             <div class="border border-slate-400 py-2 px-5"></div>
             <div class="border border-slate-400 py-2 px-5">Mon</div>
@@ -407,7 +407,7 @@
             </a>
         </div>
     </div>
-    <div class="flex">
+    <div class="flex w-4/5 mx-auto">
         <div class="grid grid-rows-6 border-y border-l border-slate-400 bg-white">
             <div class="border border-slate-400 py-2 px-5"></div>
             <div class="border border-slate-400 py-2 px-5">Mon</div>
@@ -443,7 +443,7 @@
             </a>
         </div>
     </div>
-    <div class="flex">
+    <div class="flex w-4/5 mx-auto">
         <div class="grid grid-rows-6 border-y border-l border-slate-400 bg-white">
             <div class="border border-slate-400 py-2 px-5"></div>
             <div class="border border-slate-400 py-2 px-5">Mon</div>
@@ -479,7 +479,7 @@
             </a>
         </div>
     </div>
-    <div class="flex">
+    <div class="flex w-4/5 mx-auto">
         <div class="grid grid-rows-6 border-y border-l border-slate-400 bg-white">
             <div class="border border-slate-400 py-2 px-5"></div>
             <div class="border border-slate-400 py-2 px-5">Mon</div>
@@ -515,7 +515,7 @@
             </a>
         </div>
     </div>
-    <div class="flex">
+    <div class="flex w-4/5 mx-auto">
         <div class="grid grid-rows-6 border-y border-l border-slate-400 bg-white">
             <div class="border border-slate-400 py-2 px-5"></div>
             <div class="border border-slate-400 py-2 px-5">Mon</div>
@@ -551,7 +551,7 @@
             </a>
         </div>
     </div>
-    <div class="flex">
+    <div class="flex w-4/5 mx-auto">
         <div class="grid grid-rows-6 border-y border-l border-slate-400 bg-white">
             <div class="border border-slate-400 py-2 px-5"></div>
             <div class="border border-slate-400 py-2 px-5">Mon</div>
@@ -587,7 +587,7 @@
             </a>
         </div>
     </div>
-    <div class="flex">
+    <div class="flex w-4/5 mx-auto">
         <div class="grid grid-rows-6 border-y border-l border-slate-400 bg-white">
             <div class="border border-slate-400 py-2 px-5"></div>
             <div class="border border-slate-400 py-2 px-5">Mon</div>
@@ -623,7 +623,7 @@
             </a>
         </div>
     </div>
-    <div class="flex">
+    <div class="flex w-4/5 mx-auto">
         <div class="grid grid-rows-6 border-y border-l border-slate-400 bg-white">
             <div class="border border-slate-400 py-2 px-5"></div>
             <div class="border border-slate-400 py-2 px-5">Mon</div>
@@ -659,7 +659,7 @@
             </a>
         </div>
     </div>
-    <div class="flex">
+    <div class="flex w-4/5 mx-auto">
         <div class="grid grid-rows-6 border-y border-l border-slate-400 bg-white">
             <div class="border border-slate-400 py-2 px-5"></div>
             <div class="border border-slate-400 py-2 px-5">Mon</div>
@@ -695,7 +695,7 @@
             </a>
         </div>
     </div>
-    <div class="flex">
+    <div class="flex w-4/5 mx-auto">
         <div class="grid grid-rows-6 border-y border-l border-slate-400 bg-white">
             <div class="border border-slate-400 py-2 px-5"></div>
             <div class="border border-slate-400 py-2 px-5">Mon</div>
@@ -731,7 +731,7 @@
             </a>
         </div>
     </div>
-    <div class="flex mb-5">
+    <div class="flex w-4/5 mx-auto mb-5">
         <div class="grid grid-rows-6 border-y border-l border-slate-400 bg-white">
             <div class="border border-slate-400 py-2 px-5"></div>
             <div class="border border-slate-400 py-2 px-5">Mon</div>

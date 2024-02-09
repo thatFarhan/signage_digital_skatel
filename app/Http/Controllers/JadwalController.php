@@ -237,16 +237,14 @@ class JadwalController extends Controller
         ->where('kelas', '=', $kelas)
         ->where('hari', '=', 'Fri');
 
-        DB::transaction(function () use($jadwalMon, $request) {
+        DB::transaction(function () use($jadwalMon, $jadwalTue, $jadwalWed, $jadwalThu, $jadwalFri, $request) {
             for ($i = 1; $i <= 10; $i++) {
                 $jadwalMonClone = clone $jadwalMon;
                 $jadwalMonClone->where('jam_pelajaran', '=', $i)->update([
                     'id_mapel' => $request->$i
                 ]);
             }
-        });
 
-        DB::transaction(function () use($jadwalTue, $request) {
             for ($i = 1; $i <= 10; $i++) {
                 $selectBox = $i + 10;
                 $jadwalTueClone = clone $jadwalTue;
@@ -254,9 +252,7 @@ class JadwalController extends Controller
                     'id_mapel' => $request->$selectBox
                 ]);
             }
-        });
 
-        DB::transaction(function () use($jadwalWed, $request) {
             for ($i = 1; $i <= 10; $i++) {
                 $selectBox = $i + 20;
                 $jadwalWedClone = clone $jadwalWed;
@@ -264,9 +260,7 @@ class JadwalController extends Controller
                     'id_mapel' => $request->$selectBox
                 ]);
             }
-        });
 
-        DB::transaction(function () use($jadwalThu, $request) {
             for ($i = 1; $i <= 10; $i++) {
                 $selectBox = $i + 30;
                 $jadwalThuClone = clone $jadwalThu;
@@ -274,9 +268,7 @@ class JadwalController extends Controller
                     'id_mapel' => $request->$selectBox
                 ]);
             }
-        });
 
-        DB::transaction(function () use($jadwalFri, $request) {
             for ($i = 1; $i <= 10; $i++) {
                 $selectBox = $i + 40;
                 $jadwalFriClone = clone $jadwalFri;
