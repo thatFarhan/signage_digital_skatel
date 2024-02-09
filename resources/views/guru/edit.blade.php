@@ -11,7 +11,7 @@
             <div class="py-5">
                 <table>
                     <tr>
-                        <td class="p-2">Edit Guru:</td>
+                        <td class="p-2">Nama Guru:</td>
                         <td class="p-2"><input type="text" name="nama_guru" id="" value="{{ old('nama_guru', $guru->nama_guru) }}" class="border-[1.5px] border-slate-300 p-2 rounded-lg w-60"></td>
                     </tr>
                     <tr>

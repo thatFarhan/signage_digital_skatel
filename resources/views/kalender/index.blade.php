@@ -12,7 +12,7 @@
             <thead class="">
                 <tr>
                     <th class="border border-slate-400 px-2 py-2 w-1">No.</th>
-                    <th class="border border-slate-400 px-5 py-2">Info</th>
+                    <th class="border border-slate-400 px-5 py-2">Nama Kegiatan</th>
                     <th class="border border-slate-400 px-5 py-2">Tanggal Mulai</th>
                     <th class="border border-slate-400 px-5 py-2">Tanggal Selesai</th>
                     <th class="border border-slate-400 px-5 py-2 w-1">Aksi</th>

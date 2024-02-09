@@ -42,7 +42,7 @@
                 <div class="border border-slate-400 grid place-items-center">10</div>
                 @foreach ($jadwal as $d)
                 <div class="border border-slate-400 h-12">
-                    <select name="{{ $loop->iteration }}" id="" onchange="changeColor(this)" class="w-full h-full" style="background-color: {{ $d->mapel->guru->warna }}">
+                    <select name="{{ $loop->iteration }}" id="" onchange="changeColor(this)" class="w-full h-full hover:brightness-95 transition" style="background-color: {{ $d->mapel->guru->warna }}">
                         @foreach ($mapel as $e)
                         <option value="{{ $e->id_mapel }}" style="background-color: {{ $e->guru->warna }}" {{ ($d->id_mapel == $e->id_mapel ? "selected":"") }}>{{ $e->nama_mapel }} - {{ $e->guru->nama_guru }}</option>
                         @endforeach
